@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import Home from "./pages/Home";
+import Cookie from "./pages/cookie";
+import Brownie from "./pages/brownie";
+import Cupcake from "./pages/cupcake";
+import Cake from "./pages/cake";
+import OwnRecipe from './pages/ownRecipe';
+// import Footer from './components/footer'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cookie" element={<Cookie />} />  
+          <Route path="/brownie" element={<Brownie/>} /> 
+          <Route path="/cupcake" element={<Cupcake/>} /> 
+          <Route path="/cake" element={<Cake/>} /> 
+          <Route path="/OwnRecipe" element={<OwnRecipe/>} /> 
+
+        </Routes>
+ 
+    </BrowserRouter>
   );
 }
 

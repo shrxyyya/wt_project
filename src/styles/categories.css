@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 40px;  
+  /* background-color: #c5e2f7; */
+}
+
+.image {
+  width: 250px; 
+  height: 250px; 
+  margin-top: 13px;
+  cursor:pointer;
+  transition: 0.5s;
+  border: 1px solid rgb(126, 81, 81); /* Add border for the images */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+.image:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.caption {
+  color:rgb(126, 81, 81);
+  margin-top: 13px; 
+  font-family: 'Titan One';
+  font-size:x-large;
+  font-weight:100;
+  text-align: center;
+  cursor:pointer;
+  padding: 10px; 
+  border: 2px solid rgb(126, 81, 81); 
+  border-radius: 5px; 
+  width: 260px; 
+  box-sizing: border-box; 
+  background-color:rgb(244, 224, 235);
+  text-decoration: none;
+  
+}
+
+.caption:hover
+{
+  background-color:rgb(246, 210, 230);
+}
+
+.imageHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.Link{
+  text-decoration: none;
+  color:white;
+}
