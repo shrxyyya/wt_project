@@ -23,13 +23,11 @@ function Navbar() {
       <div className="center" style={{ color: ' brown' }} >
         <h1 style={{ margin: '0', cursor: 'pointer' }}>B A K E Z Y</h1>
       </div>
-          <Link to='/OwnRecipe'>
+          <Link to='/OwnRecipe' style={{textDecoration:'none'}}>
       <div className='right side'>
-        <button className="button" >+</button>     
+        <button className="button"  style={{color:'brown'}}>ADD</button>     
       </div>
       </Link>
-      
-
 
     </div>
 

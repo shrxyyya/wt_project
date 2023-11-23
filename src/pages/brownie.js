@@ -7,6 +7,7 @@ import imageThree from '../assets/brownie3.jpeg'
 import imageFour from '../assets/brownie4.jpeg'
 import imageFive from '../assets/brownies.jpg'
 import imageSix from '../assets/Cbrownie.png'
+import Footer from '../components/footer';
 import '../styles/brownie.css'
 
 
@@ -52,6 +53,7 @@ function brownie() {
           </Link>
         </div>
       </div>
+      <Footer/>
     </div>  
   )
 }

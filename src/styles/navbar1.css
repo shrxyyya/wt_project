@@ -23,68 +23,36 @@
     max-height: 100px;
     
   }
-  /* .button {
-    font-size: larger;
-    font-weight: 600;
-    float: right;
-    margin-top: 3px;
-    margin-right: 20px;
-    padding: 10px 20px;
-    background-color:rgb(241, 168, 208);
-    color: white;
-    border: 10px;;
-    border-radius: 5px; 
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #c68f92;
-    
-  }
-  
-  .button:hover::after {
-    content: 'add your own recipe'; 
-    color: #8b686a;
-    background-color: #eac2c4;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -25px; 
-    text-align: center;
-    font-size: 14px;
-    font-family: 'Fira sans';
-    font-size: 15px;
-    border:2px solid;
-  } */
-
 
   .button {
     position: relative; /* Added to allow absolute positioning within the button */
     border: 5px;
     padding: 10px 20px;
-    background-color:rgb(241, 168, 208);
+    background-color:rgb(241, 201, 223);
     color: white;
-    border: none;
+    border: 1px solid;
     border-radius: 5px;
     cursor: pointer;
+    
   }
   
   .button:hover {
     background-color:#ffc1c1;
+    
   }
   
   .button:hover::after {
-    content: 'Add your own recipe'; /* Text to be displayed on hover */
-    color: rgb(217, 163, 163);
+    content: 'add recipe'; /* Text to be displayed on hover */
+    color: rgb(165, 136, 136);
     background-color: #f5e0e0;
     position: absolute;
-    left: 0;
+    left: 4px;
     right: 5px;
-    bottom: -100px; /* Adjust as needed */
+    bottom: -40px;  /*Adjust as needed */
     
     text-align: center;
-    font-size: 20px;
-    border:2px solid;
+    font-size: 13px;
+    border:2px solid #ffc1c1;
     border-radius:5px;
     
 

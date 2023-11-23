@@ -21,15 +21,19 @@ function Navbar() {
 
       <div className="center" style={{ color: ' brown' }} >
 
-        {/* <img src={Heading} style={{
-          
-          width:'70px',
-          height:'70px'
-        }} /> */}
+     
         <h1 style={{ margin: '0' }}>B A K E Z Y</h1>
       </div>
 
-      
+      <div className='right' style={{ color: ' brown' }}>
+        <Link to='/' style={{textDecoration:'none'}} >
+      <h5 style={{color:'brown'}}>HOME</h5>
+      </Link>
+      <Link to='/contact'>
+      <h5>CONTACT US</h5>
+      </Link>
+      </div>
+   
     </div>
 
   );

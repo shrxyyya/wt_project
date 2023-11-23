@@ -7,6 +7,7 @@ import imageThree from '../assets/Salted Caramel Chocolate Chip Cookie Bars.jpeg
 import imageFour from '../assets/The Best Caramel Apple Cookies - Crumbl Copycat.jpeg'
 import imageFive from '../assets/cookie1.jpeg'
 import imageSix from '../assets/Ccookie.jpg'
+import Footer from '../components/footer';
 import '../styles/brownie.css'
 
 
@@ -56,7 +57,8 @@ function cookie() {
           </Link>
         </div>
       </div>
-        
+
+      <Footer/>  
     </div>
   )
 }

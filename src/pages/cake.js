@@ -7,6 +7,7 @@ import imageThree from '../assets/Lemon Blueberry Cheesecake Cake.jpeg'
 import imageFour from '../assets/MOIST Carrot Cake With Cream Cheese Frosting _ Butternut Bakery.jpeg'
 import imageFive from '../assets/Red Velvet Cake with Cream Cheese Frosting.jpeg'
 import imageSix from '../assets/Rich Chocolate Loaf Cake with Baileys Original Irish Cream Cream Cheese Frosting.jpeg'
+import Footer from '../components/footer';
 import '../styles/brownie.css'
 
 function cake() {
@@ -52,6 +53,7 @@ function cake() {
           </Link>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

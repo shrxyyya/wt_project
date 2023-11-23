@@ -1,60 +1,55 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // Don't forget to import axios
-import Navbar from '../components/navbar';
+import Navbar from '../components/navbar'; // Update path if needed
 import '../styles/ownRecipe.css';
+import Footer from '../components/footer';
 
-function OwnRecipe() {
-  // State to hold form data
+const OwnRecipe = () => {
   const [recipeData, setRecipeData] = useState({
     recipeName: '',
     recipeDescription: '',
-    imageFile: null, // Store the selected image file
   });
 
-  // Handler for form input changes
   const handleInputChange = (e) => {
-    const { name, value, type, files } = e.target;
+    const { name, value } = e.target;
 
-    if (type === 'file') {
-      // If the input is a file input, store the file object
-      setRecipeData({
-        ...recipeData,
-        [name]: files[0],
-      });
-    } else {
-      // If it's a regular input, handle it as usual
-      setRecipeData({
-        ...recipeData,
-        [name]: value,
-      });
-    }
+    setRecipeData({ ...recipeData, [name]: value });
   };
 
-  // Handler for form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      // Create a FormData object to send the file
-      const formData = new FormData();
-      formData.append('recipeName', recipeData.recipeName);
-      formData.append('recipeDescription', recipeData.recipeDescription);
-      formData.append('imageFile', recipeData.imageFile);
-
-      // Make a POST request to the server
-      await axios.post('http://localhost:3000/submitRecipe', formData);
-
-      console.log('Recipe submitted:', recipeData);
-      // You can reset the form or redirect the user here
+      const response = await fetch('http://localhost:3000/api/ownRecipe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // Update the content type if needed
+        },
+        body: JSON.stringify({
+          recipeName: recipeData.recipeName,
+          recipeDescription: recipeData.recipeDescription,
+        }),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to submit recipe');
+      }
+  
+      console.log('Recipe submitted successfully');
+      alert('Recipe submitted successfully');
+  
+      setRecipeData({
+        recipeName: '',
+        recipeDescription: '',
+      });
     } catch (error) {
       console.error('Error submitting recipe:', error);
-      // Handle errors, show an error message, etc.
+      alert('Failed to submit recipe');
     }
   };
 
   return (
-    <div className='form-container'> 
-      <Navbar/>
+    <div className='form-container' style={{backgroundColor:'rgb(244, 224, 235)'}}>
+      <Navbar />
       <h2>Add Your Own Recipe</h2>
       <form className='form' onSubmit={handleSubmit}>
         <div className='label'>
@@ -78,21 +73,12 @@ function OwnRecipe() {
           />
         </div>
         <br />
-        <div className='label'>
-          Insert Image:
-          <input
-            type="file"
-            name="imageFile"
-            accept="image/*"
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <br />
         <button type="submit">Submit Recipe</button>
       </form>
+      
     </div>
+    
   );
-}
+};
 
 export default OwnRecipe;

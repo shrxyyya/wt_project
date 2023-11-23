@@ -8,6 +8,7 @@ import Imagethree from '../assets/Nutella Bueno Cupcakes.jpeg';
 import Imagefour from  '../assets/Raspberry Chocolate Cupcakes (1).jpeg';
 import Imagefive from '../assets/Funfetti Vanilla Cupcakes (1).jpeg';
 import Imagesix from '../assets/White Chocolate Cupcakes - In Bloom Bakery.jpeg';
+import Footer from '../components/footer';
 import '../styles/cupcake.css'
 
 function Cupcake() {
@@ -54,6 +55,7 @@ function Cupcake() {
           
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
