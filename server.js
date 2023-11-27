@@ -12,7 +12,7 @@ app.use(cors());
 const routes = require('./Routes/recipeRoutes');
 app.use('/', routes); // Adjust the path if needed
 
-const MONGODB_URI = process.env.MONGODB_URI|| "mongodb+srv://shreyamhegde:shreya%40123@cluster0.ghxclsz.mongodb.net/";
+const MONGODB_URI = process.env.MONGODB_URI|| "mongodb://127.0.0.1:27017/";
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
